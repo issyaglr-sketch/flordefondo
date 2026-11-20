@@ -603,8 +603,7 @@ footer .mark{height:64px;display:block;margin:0 0 .6rem}
       <p>Propón un tema, cuéntanos una historia o plantea una colaboración.</p>
     </div>
     <div class="cols">
-      <form class="form" id="form" name="contacto-flordefondo" method="POST" data-netlify="true">
-<input type="hidden" name="form-name" value="contacto-flordefondo">
+      <form class="form" id="form" action="https://formspree.io/f/moedlobq" method="POST">
         <div><label for="f-nombre">Nombre</label><input id="f-nombre" name="nombre" type="text" autocomplete="name" required></div>
         <div><label for="f-correo">Correo</label><input id="f-correo" name="correo" type="email" autocomplete="email" required></div>
         <div><label for="f-tipo">Tipo de mensaje</label>
@@ -915,7 +914,7 @@ footer .mark{height:64px;display:block;margin:0 0 .6rem}
 
   /* Form (sin backend: no se envía nada) */
   $('form').addEventListener('submit',function(e){
-    e.preventDefault();
+    //e.preventDefault();
     var n=$('f-nombre').value.trim(),c=$('f-correo').value.trim(),m=$('f-msg').value.trim(),box=$('form-msg'),err=[];
     if(!n)err.push('escribe tu nombre');
     if(!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(c))err.push('escribe un correo válido');
